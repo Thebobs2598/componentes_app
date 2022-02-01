@@ -9,6 +9,8 @@ class ListView2Screen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ListView Tipo 2'),
+        elevation: 0,
+        backgroundColor: Colors.indigo,
       ),
       body: ListView.separated(
         itemCount: options.length,
@@ -17,6 +19,10 @@ class ListView2Screen extends StatelessWidget {
           title: Text(
             options[index],
           ),
+          onTap: () {
+            final game = options[index];
+            print(game);
+          },
         ),
         separatorBuilder: (_, __) => const Divider(),
       ),
