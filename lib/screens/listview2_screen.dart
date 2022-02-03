@@ -20,8 +20,8 @@ class ListView2Screen extends StatelessWidget {
             options[index],
           ),
           onTap: () {
-            final game = options[index];
-            print(game);
+            // final game = options[index];
+            // print(game);
           },
         ),
         separatorBuilder: (_, __) => const Divider(),
