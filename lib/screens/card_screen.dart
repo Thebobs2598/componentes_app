@@ -16,25 +16,28 @@ class CardScreen extends StatelessWidget {
         children: const [
           CustomCardType1(),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
-          CustomCardType2(),
+          CustomCardType2(
+            name: 'Unas montañas hermosas',
+            imageUrl:
+                'https://www.ninoversace.com/wp-content/uploads/landscape-mountains-sky-4843193.jpg',
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          CustomCardType2(
+            name: 'Un lago precioso',
+            imageUrl:
+                'http://www.solofondos.com/wp-content/uploads/2016/04/mountain-landscape-wallpaper.jpg',
+          ),
           SizedBox(
             height: 10,
           ),
-          CustomCardType2(),
-          SizedBox(
-            height: 10,
+          CustomCardType2(
+            imageUrl:
+                'https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg',
           ),
-          CustomCardType2(),
-          SizedBox(
-            height: 10,
-          ),
-          CustomCardType2(),
-          SizedBox(
-            height: 10,
-          ),
-          CustomCardType2(),
         ],
       ),
     );
