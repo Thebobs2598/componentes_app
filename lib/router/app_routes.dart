@@ -52,6 +52,11 @@ class AppRoutes {
       screen: const AnimatedScreen(),
       icon: Icons.play_arrow_rounded,
     ),
+    MenuOption(
+        route: 'inputs',
+        name: 'Text inputs',
+        screen: const InputsScreen(),
+        icon: Icons.input_rounded),
   ];
 
   // **Otra opción para rutas
