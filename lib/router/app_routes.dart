@@ -36,10 +36,17 @@ class AppRoutes {
     ),
     //Cards
     MenuOption(
-        route: 'card',
-        name: 'Cards',
-        screen: const CardScreen(),
-        icon: Icons.calendar_today_outlined)
+      route: 'card',
+      name: 'Cards',
+      screen: const CardScreen(),
+      icon: Icons.calendar_today_outlined,
+    ),
+    MenuOption(
+      route: 'avatar',
+      name: 'Avatar',
+      screen: const AvatarScreen(),
+      icon: Icons.account_circle_sharp,
+    )
   ];
 
   // **Otra opción para rutas
