@@ -13,6 +13,7 @@ class InputsScreen extends StatelessWidget {
       'last_name': 'Larrea',
       'email': 'jossue2598@gmail.com',
       'password': '123456789',
+      'role': 'admin',
     };
     return Scaffold(
       appBar: AppBar(
@@ -32,33 +33,46 @@ class InputsScreen extends StatelessWidget {
                 CustomInputField(
                   labelText: 'Nombre',
                   hintText: 'Nombre del usuario',
+                  formProperty: 'first_name',
+                  formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomInputField(
                   labelText: 'Apellido',
                   hintText: 'Apellido del usuario',
+                  formProperty: 'last_name',
+                  formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomInputField(
                   labelText: 'Correo',
                   hintText: 'Correo del usuario',
                   keyboardType: TextInputType.emailAddress,
+                  formProperty: 'email',
+                  formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomInputField(
                   labelText: 'Contraseña',
                   hintText: 'Contraseña del usuario',
                   obscureText: true,
+                  formProperty: 'password',
+                  formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
+                
+                const SizedBox(
+                  height: 30,
+                ),
+
                 ElevatedButton(
                   child: const SizedBox(
                     width: double.infinity,
