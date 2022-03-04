@@ -68,11 +68,34 @@ class InputsScreen extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                
                 const SizedBox(
                   height: 30,
                 ),
-
+                DropdownButtonFormField<String>(
+                  value: 'Admin',
+                  items: const [
+                    DropdownMenuItem(
+                      value: 'Admin',
+                      child: Text('Admin'),
+                    ),
+                    DropdownMenuItem(
+                      value: 'SuperUser',
+                      child: Text('Super User'),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Developer',
+                      child: Text('Developer'),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Jr. Developer',
+                      child: Text('Jr. Developer'),
+                    ),
+                  ],
+                  onChanged: (value) {
+                    
+                    formValues['role'] = value ?? 'Admin';
+                  },
+                ),
                 ElevatedButton(
                   child: const SizedBox(
                     width: double.infinity,
