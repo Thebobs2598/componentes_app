@@ -29,8 +29,7 @@ class CustomInputField extends StatelessWidget {
     return TextFormField(
       // autofocus: true,
 
-      maxLines: 20,
-      minLines: 1,
+      
       initialValue: '',
       textCapitalization: TextCapitalization.words,
       keyboardType: keyboardType,

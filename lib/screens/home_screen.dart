@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
                 // );
                 // Navigator.pushReplacement(context, route);
                 Navigator.pushNamed(context, menuOptions[index].route);
+                
               },
             );
           },
