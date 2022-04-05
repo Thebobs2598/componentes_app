@@ -53,10 +53,17 @@ class AppRoutes {
       icon: Icons.play_arrow_rounded,
     ),
     MenuOption(
-        route: 'inputs',
-        name: 'Text inputs',
-        screen: const InputsScreen(),
-        icon: Icons.input_rounded),
+      route: 'inputs',
+      name: 'Text inputs',
+      screen: const InputsScreen(),
+      icon: Icons.input_rounded,
+    ),
+    MenuOption(
+      route: 'slider',
+      name: 'Sliders and Checks',
+      screen: const SliderScreen(),
+      icon: Icons.slow_motion_video,
+    ),
   ];
 
   // **Otra opción para rutas
