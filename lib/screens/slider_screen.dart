@@ -10,38 +10,69 @@ class SliderScreen extends StatefulWidget {
 
 class _SliderScreenState extends State<SliderScreen> {
   double _sliderValue = 100;
+  bool _sliderEnable = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Sliders and Checks'),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Slider.adaptive(
-                min: 50,
-                max: 400,
-                activeColor: AppDarkTheme.primary,
-                divisions: 10,
-                value: _sliderValue,
-                onChanged: (value) {
-                  _sliderValue = value;
-                  setState(() {});
-                },
-              ),
-              Image(
-                image: const NetworkImage(
-                  'https://www.teahub.io/photos/full/317-3178170_imagenes-de-motos-deportivas.jpg',
+        body: Column(
+          children: [
+            Slider.adaptive(
+              min: 50,
+              max: 900,
+              activeColor: AppDarkTheme.primary,
+              value: _sliderValue,
+              onChanged: _sliderEnable
+                  ? (value) {
+                      _sliderValue = value;
+                      setState(() {});
+                    }
+                  : null,
+            ),
+            // Checkbox(
+            //   value: _sliderEnable,
+            //   onChanged: (value) {
+            //     _sliderEnable = value ?? true;
+            //     setState(() {});
+            //   },
+            // ),
+            // Switch(
+            //   value: _sliderEnable,
+            //   onChanged: (value) => setState(() {
+            //     _sliderEnable = value;
+            //   }),
+            // ),
+            CheckboxListTile(
+              activeColor: AppDarkTheme.primary,
+              title: const Text("Habilitar Slider"),
+              value: _sliderEnable,
+              onChanged: (value) => setState(() {
+                _sliderEnable = value ?? true;
+              }),
+            ),
+            SwitchListTile.adaptive(
+              activeColor: AppDarkTheme.primary,
+              title: const Text("Habilitar Slider"),
+              value: _sliderEnable,
+              onChanged: (value) => setState(() {
+                _sliderEnable = value;
+              }),
+            ),
+
+            Expanded(
+              child: SingleChildScrollView(
+                child: Image(
+                  image: const NetworkImage(
+                    'https://i.pinimg.com/736x/11/d2/2d/11d22ddea533a5d7150ce3dccb284053.jpg',
+                  ),
+                  fit: BoxFit.contain,
+                  width: _sliderValue,
                 ),
-                fit: BoxFit.contain,
-                width: _sliderValue,
               ),
-              const SizedBox(
-                height: 100,
-              )
-            ],
-          ),
+            ),
+          ],
         ));
   }
 }
