@@ -1,4 +1,5 @@
 import 'package:componentes_app/models/models.dart';
+import 'package:componentes_app/screens/listview_builder_screen.dart';
 import 'package:componentes_app/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -64,6 +65,11 @@ class AppRoutes {
       screen: const SliderScreen(),
       icon: Icons.slow_motion_video,
     ),
+    MenuOption(
+        route: 'listViewBuilder',
+        name: 'Infiniti Scroll',
+        screen: const ListViewBuilderScreen(),
+        icon: Icons.build_circle_outlined),
   ];
 
   // **Otra opción para rutas
